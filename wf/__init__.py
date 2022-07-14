@@ -76,7 +76,7 @@ def aggregated_qc(input_dir: LatchDir) -> LatchDir:
     report.
 
     __metadata__:
-        display_name: Aggregated QC (FastQc+MultiQC)
+        display_name: AggregatedQC
         author:
             name: Ritah Nabunje
             email: ritahnabunje@gmail.com
