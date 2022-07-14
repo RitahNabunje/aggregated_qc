@@ -46,15 +46,12 @@ def aggregate_reports(reports_dir: LatchDir) -> LatchDir:
     out_dir = f"/aggregated_qc"
     out_file = f"{out_dir}/aggregated_qc_report.html"
 
-    # "latch:///fastqc_out"
-
     _multiqc_cmd = [
         "multiqc",
         reports_dir,
         "-n",
         out_file
     ]
-    # multiqc.run(reports)
     subprocess.run(_multiqc_cmd)
 
     return LatchDir(str(out_dir), f"latch:///{out_dir}")
