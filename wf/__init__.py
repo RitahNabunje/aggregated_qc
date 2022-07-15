@@ -17,11 +17,11 @@ def qc_assessment(input_dir: LatchDir) -> LatchDir:
     q_files = ['.fastq', '.fq', '.FASTQ', '.FQ']
     input_files = [f for f in Path(input_dir).iterdir() if f.suffix in q_files]
     # output directory
-    output_dir = Path("/aggregated_qc")
+    output_dir = Path("aggregated_qc")
     # make output_dir
     _outdir_cmd = [
         "mkdir",
-        "/aggregated_qc"
+        "aggregated_qc"
     ]
     subprocess.run(_outdir_cmd)
 
@@ -43,7 +43,7 @@ def aggregate_reports(reports_dir: LatchDir) -> LatchDir:
     Run Multiqc on all qc report files in the input directory.
     """
     # output file
-    out_dir = f"/aggregated_qc"
+    out_dir = f"aggregated_qc"
     out_file = f"{out_dir}/aggregated_qc_report.html"
 
     _multiqc_cmd = [
