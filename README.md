@@ -1,10 +1,15 @@
 AggregatedQC
 ---
 
-## Two-step Workflow for Assessing NGS Read Quality and Aggregating the Quality Report into One
+## Two-step Workflow for Assessing NGS Read Quality and Aggregating the Quality Reports
 
 AggregatedQC uses FASTQC to assess read quality for all availed read files in a directory, then employs MultiQC to aggregate the reports into one. It is an easy and quick to use workflow available freely on LatchBio.
 
+## Input
+- a directory with raw FastQ files i.e .fastq, .FASTQ, .fq or .FQ
+
+## Output
+- an aggregated QC report for all the files run.
 
 ## Quickstart
 ### Using AggregatedQC on LatchBio
